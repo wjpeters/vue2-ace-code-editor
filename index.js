@@ -27,10 +27,6 @@ module.exports = {
     sync: {
       type: Boolean,
       default: false
-    },
-    editorId: {
-      type: int,
-      default: false
     }
   },
 

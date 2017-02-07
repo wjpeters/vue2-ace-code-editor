@@ -5,7 +5,7 @@ A Vue2 component for including the [ace editor](https://ace.c9.io/).
 ### Installation
 
 ```
-npm install -save vue2-ace-editor
+npm install -save vue2-ace-code-editor
 ```
 
 ### How to use
@@ -13,7 +13,7 @@ npm install -save vue2-ace-editor
 Import the component, the mode and the theme in `<script>`.
 
 ```
-import editor from 'vue2-ace-editor'
+import editor from 'vue2-ace-code-editor'
 import 'brace/mode/javascript'
 import 'brace/theme/chrome'
 ```
@@ -30,7 +30,7 @@ Use the component in your `template`. Make sure to change `variable` to a string
 the editor should start with (it can be an empty string too).
 
 ```
-<editor :content="variable"></editor>
+<editor :content="variable" v-on:change-content="changeContent"></editor>
 ```
 
 
@@ -74,6 +74,6 @@ Last but not least listen on the `editor-update`. Make sure to replace
 ```
 mounted () {
   const vm = this;
-  vm.$on('editor-update', vm.function);
+  vm.$on('change-content', vm.function);
 }
 ```

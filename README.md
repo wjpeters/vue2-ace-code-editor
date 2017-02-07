@@ -13,7 +13,7 @@ npm install -save vue2-ace-editor
 Import the component, the mode and the theme in `<script>`.
 
 ```
-import editor from 'vue2-ace'
+import editor from 'vue2-ace-editor'
 import 'brace/mode/javascript'
 import 'brace/theme/chrome'
 ```

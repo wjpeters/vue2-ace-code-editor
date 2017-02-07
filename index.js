@@ -50,7 +50,7 @@ module.exports = {
     editor.setTheme('ace/theme/' + theme);
     editor.setValue(vm.content, 1);
     editor.on('change', function () {
-      vm.$parent.$emit('editor-update', editor.getValue());
+      vm.$parent.$emit('change-content', editor.getValue());
     });
   },
 
